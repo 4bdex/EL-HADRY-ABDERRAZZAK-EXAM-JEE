@@ -14,6 +14,6 @@ public class Client {
     private String nom;
     private String email;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Credit> credits;
 }

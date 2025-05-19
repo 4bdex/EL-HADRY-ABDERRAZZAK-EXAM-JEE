@@ -1,0 +1,58 @@
+GET http://localhost:8084/api/clients/1
+###
+
+POST http://localhost:8084/api/clients
+Content-Type: application/json
+
+{
+  "nom": "Test",
+  "email": "test@email.com"
+}
+###
+
+DELETE http://localhost:8084/api/clients/1
+###
+
+
+GET http://localhost:8084/api/credits
+###
+
+GET http://localhost:8084/api/credits/1
+###
+
+POST http://localhost:8084/api/credits
+Content-Type: application/json
+
+{
+  "dateDemande": "2025-05-19",
+  "statut": "EN_COURS",
+  "montant": 10000,
+  "dureeRemboursement": 24,
+  "tauxInteret": 4.5,
+  "motif": "Achat voiture",
+  "typeCredit": "PERSONNEL",
+  "clientId": 1
+}
+###
+
+
+DELETE http://localhost:8084/api/credits/1
+###
+
+GET http://localhost:8084/api/remboursements
+###
+
+GET http://localhost:8084/api/remboursements/1
+###
+
+POST http://localhost:8084/api/remboursements
+Content-Type: application/json
+
+{
+  "date": "2025-05-19",
+  "montant": 500,
+  "type": "MENSUALITE",
+  "creditId": 1
+}
+###
+DELETE http://localhost:8084/api/remboursements/1
